@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Website Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .brand img {
+            width: 40px;
+        }
+
+        .brand p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .main-background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .main-content {
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .main-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-content a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background: #333;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-head h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-head p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .collection-list ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .collection-list ul li {
+            width: 30%;
+            margin-bottom: 20px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .collection-list ul li img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .list-head h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .list-head span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .new-collection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+        }
+
+        .new-collection .mid-title {
+            text-align: center;
+            color: #fff;
+        }
+
+        .new-collection .mid-title h2 {
+            font-size: 36px;
+        }
+
+        .new-collection .mid-title a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .card-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card-wrapper section {
+            width: 48%;
+            height: 200px;
+            background: #f4f4f4;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-title h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-title p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .gallery {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .gallery ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .gallery ul li {
+            width: 32%;
+            margin-bottom: 20px;
+        }
+
+        .gallery ul li img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .about {
+            background: #fff;
+            padding: 60px 0;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrapper .left {
+            width: 45%;
+            background: url('https://via.placeholder.com/500x400') no-repeat center center/cover;
+            border-radius: 5px;
+        }
+
+        .wrapper .right {
+            width: 45%;
+        }
+
+        .wrapper .text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .wrapper .text p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .contact form input[type="button"] {
+            width: auto;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bottom-links {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .bottom-links ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .bottom-links ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .bottom-links ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <div class="container">
+            <div class="brand">
+                <img src="https://vignette4.wikia.nocookie.net/joke-battles/images/4/41/Infinity_Logo_Gold.png/revision/latest?cb=20151230235753" alt="Infinity Golden Jewelry">
+                <p>Infinity Golden Jewelry</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#custom-sec">Custom Jewelry</a></li>
+                <li><a href="#designer-sec">Designer Jewelry</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="main-background">
+            <div class="container">
+                <div class="main-content">
+                    <h1>Infinity Golden Jewelry</h1>
+                    <h2>24 Caratage Yellow Gold Bracelet</h2>
+                    <p>Shop the latest designs from new brands</p>
+                    <a href="#custom-sec">- View Products</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="custom-sec">
+        <div class="container">
+            <div class="section-head">
+                <h2>Custom Jewelry</h2>
+                <p>Latest Design</p>
+            </div>
+            <div class="collection-list">
+                <ul>
+                    <li>
+                        <img src="http://www.thomassabo.com/dw/image/v2/AAQY_PRD/on/demandware.static/-/Sites-ts-master-catalog/default/dwbb260100/productimages/LBA0102-415-12.png?sw=310&sfrm=png" alt="Bracelet">
+                        <div class="list-head">
+                            <h3>Bracelets</h3>
+                            <span>The description of the item.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://s-media-cache-ak0.pinimg.com/originals/27/41/69/274169b4444ccf7448d4133c13dd05c1.png" alt="Ring">
+                        <div class="list-head">
+                            <h3>Rings</h3>
+                            <span>The description of the item.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://pngimg.com/uploads/necklace/necklace_PNG6701.png" alt="Necklace">
+                        <div class="list-head">
+                            <h3>Necklace</h3>
+                            <span>The description of the item.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-collection">
+        <div class="container">
+            <div class="mid-title">
+                <h2>New Collections</h2>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="designer-sec">
+        <div class="container">
+            <div class="section-head">
+                <h2>Designer Jewelry</h2>
+                <p>New Arrival</p>
+            </div>
+            <div class="card-wrapper">
+                <section>
+                    <div class="card-title">
+                        <h3>New Collection</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="card-title">
+                        <h3>Limited Edition</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="section-head">
+                <h2>Gallery</h2>
+            </div>
+            <div class="collection-list">
+                <ul>
+                    <li>
+                        <img src="https://via.placeholder.com/400x300" alt="Gallery Image 1">
+                    </li>
+                    <li>
+                        <img src="https://via.placeholder.com/400x300" alt="Gallery Image 2">
+                    </li>
+                    <li>
+                        <img src="https://via.placeholder.com/400x300" alt="Gallery Image 3">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-head">
+                <h2>About Us</h2>
+            </div>
+            <div class="wrapper">
+                <div class="left"></div>
+                <div class="right">
+                    <div class="text">
+                        <h3>Our Story</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque erat in blandit luctus. Pellentesque scelerisque nunc vitae dolor tempor, et dictum turpis faucibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-head">
+                <h2>Contact Us</h2>
+            </div>
+            <form action="#">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" rows="5" placeholder="Message"></textarea>
+                <input type="button" value="Send">
+            </form>
+        </div>
+    </section>
+
+    <div class="bottom-links">
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#custom-sec">Privacy</a></li>
+                <li><a href="#designer-sec">Terms & Conditions</a></li>
+                <li><a href="#about">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
